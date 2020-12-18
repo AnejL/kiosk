@@ -20,7 +20,7 @@ function sudolineinfile {
 }
 
 echo "Installing dependencies"
-sudo apt-get install xserver-xorg-video-all xserver-xorg-input-all xserver-xorg-core xinit x11-xserver-utils chromium-browser unclutter
+sudo apt install xserver-xorg-video-all xserver-xorg-input-all xserver-xorg-core xinit x11-xserver-utils chromium-browser unclutter
 
 echo "Screen rotation setup"
 sudolineinfile "display_rotate=1" "/boot/config.txt"
