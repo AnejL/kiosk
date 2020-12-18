@@ -20,14 +20,12 @@ function sudolineinfile {
 }
 
 echo "Installing dependencies"
-sudo apt-get install --no-install-recommends xserver-xorg-video-all xserver-xorg-input-all xserver-xorg-core xinit x11-xserver-utils chromium-browser unclutter
+# sudo apt-get install --no-install-recommends xserver-xorg-video-all xserver-xorg-input-all xserver-xorg-core xinit x11-xserver-utils chromium-browser unclutter
 
 echo "Screen rotation setup"
-sudolineinfile "display_rotate=1" "/boot/config.txt"
-# sudolineinfile "display_rotate=1" "test.txt"
+# sudolineinfile "display_rotate=1" "/boot/config.txt"
+sudolineinfile "display_rotate=1" "test.txt"
 
 echo "Making config directory and copying over the touchscreen config"
 [ ! -d "/etc/X11/xorg.conf.d" ] && sudo mkdir /etc/X11/xorg.conf.d
 sudo cp 40-libinput.conf /etc/X11/xorg.conf.d/
-
-
