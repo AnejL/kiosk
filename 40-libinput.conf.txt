@@ -1,0 +1,16 @@
+EndSection
+
+Section "InputClass"
+	Identifier "libinput touchscreen catchall"
+	MatchIsTouchscreen "on"
+	Option "CalibrationMatrix" "0 1 0 -1 0 1 0 0 1"
+	MatchDevicePath "/dev/input/event*"
+	Driver "libinput"
+EndSection
+
+Section "InputClass"
+	Identifier "libinput tablet catchall"
+	MatchIsTablet "on"
+	MatchDevicePath "/dev/input/event*"
+	Driver "libinput"
+EndSection
